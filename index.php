@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html lang="en" class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="lt-ie9"> <![endif]-->
+<html version="1.0.4" lang="pt-br">
+<?php include "../_logManager.php"; ?>
+<head>
+    <!-- UTF8 -->
+    <meta charset="utf-8"/>
+    <!-- [SEO] No translate, no custom search -->
+    <meta name="google" content="nositelinkssearchbox"/>
+    <meta name="google" content="notranslate"/>
+    <!-- Required webpage title -->
+    <title> Sem Sol </title>
+    <!-- [SEO] Metadata -->
+    <meta name="author" content="Matheus Avellar"/>
+    <meta name="description" content="Qual lado do ônibus vai pegar menos sol?"/>
+    <!-- Obligatory viewport meta tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!-- Disable automatic phone number detection (iOS8) -->
+    <meta name="format-detection" content="telephone=no"/>
+    <!-- Activate ClearType on Mobile IE for smoother fonts -->
+    <meta http-equiv="cleartype" content="on"/>
+    <!-- Mobile color theme -->
+    <meta name="theme-color" content="#eeeeee"/>
+    <meta name="msapplication-navbutton-color" content="#eeeeee"/>
+    <!-- Allow web app to be run in full-screen mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- Configure the status bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <!-- Open Graph (Facebook) -->
+    <meta property="og:title" content="Sem Sol"/>
+    <meta property="og:image" content="dird.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="Qual lado do ônibus vai pegar menos sol?"/>
+    <meta property="og:locale" content="en_US"/>
+    <meta property="og:url" content="https://avellar.ml"/>
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="summary"/>
+    <meta property="twitter:site" content="@avll0"/>
+    <meta property="twitter:title" content="Sem Sol"/>
+    <meta property="twitter:description" content="Qual lado do ônibus vai pegar menos sol?"/>
+    <meta property="twitter:image" content="https://www.avellar.ml/dird.jpg"/>
+    <!-- iPhone 6 Plus -->
+    <link rel="apple-touch-icon-precomposed" sizes="180x180" href="https://www.avellar.ml/ico/apple-touch-icon-180x180.png"/>
+    <!-- iPad retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://www.avellar.ml/ico/apple-touch-icon-152x152.png"/>
+    <!-- iPad retina (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.avellar.ml/ico/apple-touch-icon-144x144.png"/>
+    <!-- iPhone retina touch icon (iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://www.avellar.ml/ico/apple-touch-icon-120x120.png"/>
+    <!-- iPhone retina touch icon (iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://www.avellar.ml/ico/apple-touch-icon-114x114.png"/>
+    <!-- iPad touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="76x76"   href="https://www.avellar.ml/ico/apple-touch-icon-76x76.png"/>
+    <!-- iPad touch icon (non-retina / iOS6-) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72"   href="https://www.avellar.ml/ico/apple-touch-icon-72x72.png"/>
+    <!-- iPhone touch icon (non-retina / iOS7) -->
+    <link rel="apple-touch-icon-precomposed" sizes="60x60"   href="https://www.avellar.ml/ico/apple-touch-icon-60x60.png"/>
+    <!-- Standard iOS home screen (iPod Touch, iPhone first generation to 3G -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57"   href="https://www.avellar.ml/ico/apple-touch-icon-57x57.png"/>
+    <!-- Android Chrome (M31+) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-196x196.png" sizes="196x196"/>
+    <!-- Android material standarization of 48px units -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-192x192.png" sizes="192x192"/>
+    <!-- GoogleTV icon -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-96x96.png"   sizes="96x96"/>
+    <!-- New tab page in IE; Taskbar button in Windows 7+; Safari Reading List sidebar -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-32x32.png"   sizes="32x32"/>
+    <!-- Standard for most browsers -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-16x16.png"   sizes="16x16"/>
+    <!-- Chrome Web store app icon; Android icon (low-res) -->
+    <link rel="icon" type="image/png" href="https://www.avellar.ml/ico/favicon-128.png"     sizes="128x128"/>
+    <!-- Android default name for pinned website -->
+    <meta name="application-name" content="Sem Sol"/>
+    <!-- IE10 Metro tile for pinned website -->
+    <meta name="msapplication-tooltip" content="avellar.ml"/>
+    <meta name="msapplication-config" content="https://www.avellar.ml/ico/ieconfig.xml"/>
+    <meta name="msapplication-TileColor" content="#eeeeee"/>
+    <meta name="msapplication-TileImage" content="https://www.avellar.ml/ico/mstile-144x144.png"/>
+    <!-- Windows 8.1 Metro tile image (small) -->
+    <meta name="msapplication-square70x70logo"   content="https://www.avellar.ml/ico/mstile-70x70.png"/>
+    <!-- Windows 8.1 Metro tile image (square) -->
+    <meta name="msapplication-square150x150logo" content="https://www.avellar.ml/ico/mstile-150x150.png"/>
+    <!-- Windows 8.1 Metro tile image (wide) -->
+    <meta name="msapplication-wide310x150logo"   content="https://www.avellar.ml/ico/mstile-310x150.png"/>
+    <!-- Windows 8.1 Metro tile image (large) -->
+    <meta name="msapplication-square310x310logo" content="https://www.avellar.ml/ico/mstile-310x310.png"/>
+    <!-- Setting up relative links throughout the website -->
+    <!--<base href="https://avellar.ml/" target="_blank"/>-->
+    <!-- Get that styling! -->
+    <link rel="stylesheet" type="text/css" href="/sem-sol/resources/leaflet.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"/>
+    <style type="text/css">
+        * {
+            margin: 0;
+            border: 0;
+            padding: 0;
+            outline: 0;
+            font-size: 0;
+            list-style: none;
+            font-weight: normal;
+            text-decoration: none;
+            box-sizing: border-box;
+            background: transparent;
+            vertical-align: middle;
+            -webkit-text-decoration-skip: ink;
+        }
+        html {
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            overflow-y: hidden;
+            font-size: calc(1vh + 1vw / 2);
+            background-color: #fdfffc;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            cursor: default;
+        }
+        body {
+            width: 100%;
+            min-width: 100%;
+            height: 100%;
+            font-family: "Roboto", sans-serif;
+            color: #161925;
+            font-size: 1rem;
+        }
+        #sidebar {
+            position: fixed;
+            z-index: 1;
+            width: 30%;
+            height: 100%;
+            background-color: #fdfffc;
+            border-right: 2px solid #b1b1b1;
+        }
+        #map {
+            float: right;
+            display: inline-block;
+            height: 100%;
+            width: 70%;
+        }
+        select {
+            padding: 1%;
+            border: 1px solid #b1b1b1;
+            font-size: 1rem;
+        }
+        #direction {
+            margin: 5% 0;
+        }
+        #bus::before {
+            display: inline-block;
+            font-size: inherit;
+            content: "Ônibus: ";
+        }
+        #direction::before {
+            display: inline-block;
+            font-size: inherit;
+            content: "Direção: ";
+        }
+        #time::before {
+            display: inline-block;
+            font-size: inherit;
+            content: "Horário: ";
+        }
+        #options {
+            width: 100%;
+            border-bottom: 2px solid #b1b1b1;
+            padding: 5%;
+        }
+        #sun {
+            padding: 5%;
+            font-size: 1rem;
+        }
+        div, p, a, span {
+            font-size: inherit;
+        }
+        button {
+            font-size: 1rem;
+            cursor: pointer;
+            width: 70%;
+            margin: 5% 15%;
+            padding: 3%;
+            color: #fdfffc;
+            background-color: #2b59c3;
+            border-bottom: 5px solid #235789;
+            font-family: "Roboto", sans-serif;
+        }
+        button:active {
+            border: none;
+            transform: translateY(5px);
+            background-color: #235789;
+        }
+        svg {
+            fill: #161925;
+        }
+        #side-left, #side-right {
+            display: block;
+            width: 45%;
+            margin: 0 1% 0 0;
+            float: left;
+            padding: 5%;
+            height: 50%;
+            border: 2px solid #b1b1b1;
+            background-color: #eee;
+            text-align: center;
+        }
+        #side-right {
+            float: right;
+            margin: 0 0 0 1%;
+        }
+        #side-left::before, #side-right::before {
+            content: "Esquerdo";
+            font-size: 1.25rem;
+            display: block;
+            text-transform: uppercase;
+        }
+        #side-right::before {
+            content: "Direito";
+        }
+        #left, #right {
+            display: block;
+            margin: 5%;
+            font-size: 2.25rem;
+        }
+        #left::after, #right::after {
+            content: "%";
+            font-size: 1.5rem;
+        }
+        .way {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+        .images {
+            margin-top: 10%;
+            border-top: 2px solid #b1b1b1;
+            padding-top: 10%;
+        }
+        .icon {
+            width: 20%;
+            height: 20%;
+        }
+        #sun > .good {
+            color: #eee;
+            border-color: #1b5e20;
+            background-color: #43a047;
+        }
+        #sun > .bad {
+            color: #eee;
+            border-color: #b71c1c;
+            background-color: #f44336;
+        }
+        #sun > .good .images, #sun > .bad  .images {
+            border-color: #eee;
+        }
+        #sun > .good svg, #sun > .bad svg {
+            fill: #eee;
+        }
+
+        @media screen and (max-width: 700px) {
+            #sidebar {
+                width: 100%;
+                height: 50%;
+            }
+            #map {
+                position: fixed;
+                top: 50%;
+                height: 50%;
+                width: 100%;
+            }
+            #options p, #options p select {
+                display: inline-block;
+                margin: 0;
+                font-size: inherit;
+            }
+            #options {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                font-size: 1.5rem;
+                height: 25%;
+            }
+            #sun {
+                display: flex;
+                align-content: center;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                height: 50%;
+                padding: 2%;
+            }
+            #side-left, #side-right {
+                width: 40%;
+                height: auto;
+                padding: 2%;
+            }
+            #side-left::before, #side-right::before {
+                font-size: 2.25rem;
+            }
+            #left, #right {
+                margin: 1.5%;
+                font-size: 4rem;
+            }
+            #left::after, #right::after {
+                font-size: 2.75rem;
+            }
+            .way {
+                font-size: 1.75rem;
+            }
+            .images {
+                display: none;
+            }
+            button {
+                font-size: 2rem;
+                height: 20%;
+                margin: 0 15%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div id="options">
+            <p id="bus">
+                <select>
+                    <option>220</option>
+                    <option>7</option>
+                    <option>133</option>
+                    <option>410</option>
+                    <option>420</option>
+                    <option>485</option>
+                    <option>629</option>
+                    <option>712</option>
+                    <option>830</option>
+                </select>
+            </p>
+            <p id="direction">
+                <select>
+                    <option>Ida</option>
+                    <option>Volta</option>
+                </select>
+            </p>
+            <p id="time">
+                <select>
+                    <option>Antes do meio dia</option>
+                    <option>Depois do meio dia</option>
+                </select>
+            </p>
+        </div>
+        <div id="sun">
+            <div id="side-left">
+                <div id="left">0</div>
+                <p class="way">do trajeto</p>
+                <div class="images">
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" />
+                    </svg>
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    </svg>
+                    <svg class="icon" viewBox="0 0 24 24"></svg>
+                </div>
+            </div>
+            <div id="side-right">
+                <div id="right">0</div>
+                <p class="way">do trajeto</p>
+                <div class="images">
+                    <svg class="icon" viewBox="0 0 24 24"></svg>
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z" />
+                    </svg>
+                    <svg class="icon" viewBox="0 0 24 24">
+                        <path d="M12,18A6,6 0 0,1 6,12A6,6 0 0,1 12,6A6,6 0 0,1 18,12A6,6 0 0,1 12,18M20,15.31L23.31,12L20,8.69V4H15.31L12,0.69L8.69,4H4V8.69L0.69,12L4,15.31V20H8.69L12,23.31L15.31,20H20V15.31Z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <button onclick="calculateSun();">Calcular</button>
+    </div>
+    <div id="map"></div>
+    <script type="text/javascript">
+        function err(n) {
+            if(n == -1) console.info("ONO LEAFLET");
+            else {
+                console.info("Error loading bus #" + n);
+            }
+        }
+        var bus_list = {};
+    </script>
+    <script type="text/javascript" src="/sem-sol/resources/leaflet.js" onerror="err(-1);"></script>
+    <script type="text/javascript">
+        var bus = "220";
+        var bus_loaded = false;
+        var dir = "ida";
+        var before_noon = true;
+        var itinerario, map, map_path,
+            left,side_left,right,side_right,
+            selected_bus,selected_direction,selected_time;
+
+        function setBus(v) {
+            bus = ""+v;
+            if(!bus_list[bus]) {
+                console.info("Loading " + bus + ".json");
+                var request = new XMLHttpRequest();
+                request.open("GET", "/sem-sol/resources/" + bus + ".json", true);
+
+                request.onreadystatechange = function(e) {
+                    if (this.readyState === 4) {
+                        if (this.status >= 200 && this.status < 400) {
+                            // Success!
+                            bus_list[bus] = JSON.parse(this.responseText);
+                        } else {
+                            // Error
+                            err(bus);
+
+                            if("onLine" in window.navigator
+                            && !window.navigator.onLine) {
+                                alert("Erro carregando ônibus #" + bus + ". Parece que você ficou sem internet!");
+                            } else {
+                                alert("Erro carregando ônibus #" + bus + ". Poxinha. Tenta de novo, sei lá");
+                            }
+                            bus = selected_bus.value = "220";
+                        }
+                    }
+                    bus_loaded = true;
+                    update_path();
+
+                };
+                request.send();
+                request = null;
+            } else {
+                bus_loaded = true;
+                update_path();
+            }
+        }
+        setBus(220);
+
+        function update_path() {
+            if(map_path && map_path.remove) {
+                map_path.remove();
+                if(selected_direction.value == "Ida") {
+                    dir = "ida";
+                    if(bus_list[bus]) {
+                        map_path = L.polyline(bus_list[bus].ida, {color: "#0072bb"}).addTo(map);
+                    }
+                } else {
+                    dir = "volta";
+                    if(bus_list[bus]) {
+                        map_path = L.polyline(bus_list[bus].volta, {color: "#fb3640"}).addTo(map);
+                    }
+                }
+                if(bus_list[bus]) {
+                    itinerario.start[0] = bus_list[bus][dir][0];
+                    itinerario.start[1].setLatLng(itinerario.start[0]);
+                    itinerario.end[0] = bus_list[bus][dir][bus_list[bus][dir].length - 1];
+                    itinerario.end[1].setLatLng(itinerario.end[0]);
+                    map.setView(bus_list[bus][dir][~~((bus_list[bus][dir].length - 1)/2)]);
+                } else {
+                    console.info("update_path run without bus_list[bus]");
+                }
+            } else {
+                console.info("update_path run without map_path");
+            }
+        }
+
+        function getBestPos(lat, lng) {
+            var new_pos = [0,0];
+            var min_dist = -1;
+            var lat_diff = -1;
+            var lng_diff = -1;
+            var t = 0;
+            for(var i = 0, l = bus_list[bus][dir].length; i<l;i++) {
+                lat_diff = Math.abs(lat - bus_list[bus][dir][i][0]);
+                lng_diff = Math.abs(lng - bus_list[bus][dir][i][1]);
+                t = lat_diff + lng_diff;
+                if(min_dist == -1 || t < min_dist) {
+                    min_dist = t;
+                    new_pos = [
+                        bus_list[bus][dir][i][0],
+                        bus_list[bus][dir][i][1]
+                    ];
+                }
+            }
+            return new_pos;
+        }
+
+        function setBestPos(id) {
+            var m = (id == itinerario.start[1]._leaflet_id)?"start":"end";
+            itinerario[m][0] = getBestPos(itinerario[m][1].getLatLng().lat, itinerario[m][1].getLatLng().lng);
+            itinerario[m][1].setLatLng(itinerario[m][0]);
+            return itinerario[m][0];
+        }
+
+        function getDirection(pos1, pos2) {
+            var horizontal = pos2[0] - pos1[0];
+            var vertical = pos2[1] - pos1[1];
+            return [horizontal*1e5, vertical*1e5];
+        }
+
+        function calculateSun() {
+            var sun_left = 0;
+            var sun_right = 0;
+            var zero = 0;
+            var total = 0;
+            var unlocked = false;
+            for(var i = 0, l = bus_list[bus][dir].length-1; i < l; i++) {
+                if(bus_list[bus][dir][i][0] == itinerario.start[0][0]
+                && bus_list[bus][dir][i][1] == itinerario.start[0][1]
+                && !unlocked) {
+                    unlocked = "start";
+                } else if (bus_list[bus][dir][i][0] == itinerario.end[0][0]
+                && bus_list[bus][dir][i][1] == itinerario.end[0][1]
+                && !unlocked) {
+                    unlocked = "end";
+                }
+                if(unlocked) {
+                    var a = getDirection(bus_list[bus][dir][i],bus_list[bus][dir][i+1]);
+                    total += Math.abs(a[0]);
+                    if(a[0] > 0)sun_right += Math.abs(a[0]);
+                    else if(a[0] < 0)sun_left += Math.abs(a[0]);
+                    else zero += Math.abs(a[0]);
+                }
+                if(bus_list[bus][dir][i][0] == itinerario.end[0][0]
+                && bus_list[bus][dir][i][1] == itinerario.end[0][1]
+                && unlocked == "start"
+                || bus_list[bus][dir][i][0] == itinerario.start[0][0]
+                && bus_list[bus][dir][i][1] == itinerario.start[0][1]
+                && unlocked == "end")break;
+            }
+            var value_left = Math.round((100*sun_left/total)*100)/100;
+            var value_right = Math.round((100*sun_right/total)*100)/100;
+
+            if(!before_noon) {
+                var _t = value_left;
+                value_left = value_right;
+                value_right = _t;
+            }
+
+            left.innerText = value_left;
+            right.innerText = value_right;
+            if(value_left>value_right) {
+                side_left.className = "bad";
+                side_right.className = "good";
+            } else {
+                side_left.className = "good";
+                side_right.className = "bad";
+            }
+        }
+
+        function resetSides() {
+            left.innerText = 0;
+            right.innerText = 0;
+            side_left.className = "";
+            side_right.className = "";
+        }
+
+        function init() {
+            itinerario = {
+                start: [[false, 0,0], false],
+                end: [[false, 0,0], false]
+            }
+
+            map = L.map("map", {
+                preferCanvas: true,
+                center: bus_list[bus][dir][~~((bus_list[bus][dir].length - 1)/2)],
+                zoom: 13,
+                zoomControl: true,
+                trackResize: true,
+                minZoom: 11
+            });
+            map_path = L.polyline(bus_list[bus][dir], {color: "#0072bb"}).addTo(map);
+
+            left = document.getElementById("left");
+            side_left = document.getElementById("side-left");
+            right = document.getElementById("right");
+            side_right = document.getElementById("side-right");
+
+
+            selected_bus = document.getElementById("bus").children[0];
+            selected_direction = document.getElementById("direction").children[0];
+            selected_time = document.getElementById("time").children[0];
+
+            selected_bus.onchange = function(e) {
+                resetSides();
+                setBus(selected_bus.value);
+            };
+
+            selected_direction.onchange = function(e) {
+                resetSides();
+                update_path();
+            }
+
+            selected_time.onchange = function(e) {
+                resetSides();
+                before_noon = !!(selected_time.value.indexOf("Antes")+1);
+            }
+
+            itinerario.start = [
+                bus_list[bus][dir][0],
+                L.marker(bus_list[bus][dir][0], {
+                    draggable: true
+                }).addTo(map).on("dragend", function(v) {
+                    setBestPos(v.target._leaflet_id);
+                })
+            ];
+            itinerario.end = [
+                bus_list[bus][dir][bus_list[bus][dir].length - 1],
+                L.marker(bus_list[bus][dir][bus_list[bus][dir].length - 1], {
+                    draggable: true
+                }).addTo(map).on("dragend", function(v) {
+                    setBestPos(v.target._leaflet_id);
+                })
+            ];
+
+            L.tileLayer("https://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png", {
+                attribution: "Tiles courtesy of <a href='http://openstreetmap.se/' target='_blank'>OpenStreetMap Sweden</a> &mdash; Map data &copy; <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> | Made with <span class='heart'>❤</span> by <a href='https://github.com/MatheusAvellar'>Matheus Avellar</a>"
+            }).addTo(map);
+        }
+        var __t = setInterval(function() {
+            /* Take notes boys, this is some top quality programming right here */
+            if(bus_loaded) {
+                init();
+                clearInterval(__t);
+            } else {
+                console.info("Nop, didn't load yet.");
+            }
+        }, 500);
+    </script>
+</body>
+</html>
